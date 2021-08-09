@@ -1,0 +1,18 @@
+{% load static %}
+<section class="sloder-img section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="slider-center slider">
+
+            {% for f in fotos %}
+            <div>
+              <img class="img-fluid" src="{{ f.imagem.thumb.url }}" alt="">
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+{% load static %}
+<section id="pricing" class="section-padding"> 
+  <div class="container">
+      <div class="row">
+
+        {% for p in precos %} 
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="table wow fadeInLeft" data-wow-delay="1.2s">
+            <div class="title">
+              <h3>{{ p.plano }}</h3>
+            </div>
+            <div class="pricing-header">
+              <p class="price-value">{{ p.preco }}<span>/ Mês</span></p>
+            </div>
+            <ul class="description">
+              {% for b in beneficios %}
+              {% if b in p.vantagem.all %}
+              <li>{{ b.vantagem }}</li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <button class="btn btn-common">Get It</button>
+          </div> 
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+</section>

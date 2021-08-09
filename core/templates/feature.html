@@ -1,0 +1,41 @@
+{% load static %}
+<div id="feature">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="text-wrapper">
+            <div>
+              <h2 class="title-hl wow fadeInLeft" data-wow-delay="0.3s">Learn More About Us</h2>
+              <div class="row">
+
+                {% for c in caracteristicas %}
+                <div class="col-md-6 col-sm-6">
+                  <div class="features-box wow fadeInLeft" data-wow-delay="0.3s">
+                    <div class="features-icon">
+                      <i class="{{ c.icone }}"></i>
+                    </div>
+                    <div class="features-content">
+                      <h4>
+                        {{ c.servico }}
+                      </h4>
+                      <p>
+                        {{ c.desc }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+                
+              </div>
+            <!-- Imagem -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 padding-none">
+          <div class="feature-thumb wow fadeInRight" data-wow-delay="0.3s">
+            <img src="{% static 'img/feature/img-1.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
