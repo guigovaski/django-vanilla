@@ -3,8 +3,8 @@ from django.db import models
 from stdimage.models import StdImageField
 
 
-class Base(models.Model): #
-    criados = models.DateField('Criação', auto_now_add=True)
+class Base(models.Model): 
+    criado = models.DateField('Criação', auto_now_add=True)
     modificado = models.DateField('Atualização', auto_now=True)
     ativo = models.BooleanField('Atividade', default=True)
 
@@ -105,8 +105,8 @@ class Benefit(Base):
     vantagem = models.CharField('Vantagem', max_length=80)
 
     class Meta:
-        verbose_name = 'Vantagem'
-        verbose_name_plural = 'Vantagens'
+        verbose_name = 'Benefício' 
+        verbose_name_plural = 'Benefícios' 
 
     def __str__(self):
         return self.vantagem    
@@ -131,4 +131,3 @@ class Slider(Base):
     class Meta:
         verbose_name = 'Foto'
         verbose_name_plural = 'Fotos'
-            

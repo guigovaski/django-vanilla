@@ -5,18 +5,18 @@
         <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
           <div id="testimonials" class="owl-carousel wow fadeInUp" data-wow-delay="1.2s">
 
-            {% for o in opinioes %}
+            {% for d in depoimentos %}
             <div class="item">
               <div class="testimonial-item">
                 <div class="content">
-                  <p class="description">{{ o.opiniao }}</p>
+                  <p class="description">{{ d.opiniao }}</p>
                 </div>
                 <div class="img-thumb">
-                  <img src="{{ o.imagem.thumb.url }}" alt="{{ o.nome }}">
+                  <img src="{{ d.imagem.thumb.url }}" alt="{{ d.nome }}">
                 </div>
                 <div class="info">
-                  <h2><a href="#">{{ o.nome }}</a></h2>
-                  <h3><a href="#">{{ o.profissao }}</a></h3>
+                  <h2><a href="#">{{ d.nome }}</a></h2>
+                  <h3><a href="#">{{ d.profissao }}</a></h3>
                 </div>
               </div>
             </div>

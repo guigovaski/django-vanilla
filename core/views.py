@@ -10,9 +10,9 @@ class IndexView(TemplateView):
         context['servicos'] = Service.objects.all()
         context['caracteristicas'] = Feature.objects.order_by('?').all()
         context['beneficios'] = Benefit.objects.order_by('vantagem').all()
-        context['equipe'] = Team.objects.all()
+        context['funcionarios'] = Team.objects.all()
         context['clientes'] = Client.objects.all()
-        context['opinioes'] = Testimonial.objects.order_by('?').all()
+        context['depoimentos'] = Testimonial.objects.order_by('?').all()
         context['precos'] = Pricing.objects.all()
         context['fotos'] = Slider.objects.all()
         return context
