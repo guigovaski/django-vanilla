@@ -23,3 +23,20 @@ class ContatoForm(forms.Form):
             headers={'Reply-To': email}
         )
         mail.send()
+
+
+class SubscribeForm(forms.Form):
+    email = forms.EmailField(label="E-mail", max_length=80)
+
+    def send_mail(self):
+        email = self.cleaned_data['email']
+
+        conteudo = f'E-mail subscribe: {email}'
+
+        mail = EmailMessage(
+            body=conteudo,
+            from_email='contatoqualquer@qualquer.com',
+            to=['contatoqualquer@qualquer.com',],
+            headers={'Reply-To': email}
+        )
+        mail.send()
