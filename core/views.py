@@ -1,4 +1,4 @@
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 from django.urls import reverse_lazy
 from django.contrib import messages
 
@@ -30,3 +30,7 @@ class IndexView(FormView):
     def form_invalid(self, form, *args, **kwargs):
         messages.error(self.request, 'Erro ao enviar e-mail')
         return super(IndexView, self).form_invalid(form, *args, **kwargs)
+
+
+class DownloadView(TemplateView):
+    template_name = 'download.html'

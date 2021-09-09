@@ -114,7 +114,7 @@ class Benefit(Base):
 
 class Pricing(Base):
     plano = models.CharField('Plano', max_length=50)
-    preco = models.CharField('Preço', max_length=50)
+    preco = models.DecimalField('Preço', max_digits=4, decimal_places=2)
     vantagem = models.ManyToManyField(Benefit)
 
     class Meta:

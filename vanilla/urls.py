@@ -23,3 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# admin skin
+admin.AdminSite.site_header = 'Administração vanilla'
+admin.AdminSite.site_title = 'Vanilla'
+admin.AdminSite.index_title = 'Sistema Vanilla'
