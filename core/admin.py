@@ -39,7 +39,7 @@ class BenefitsAdmin(admin.ModelAdmin):
 
 @admin.register(Pricing)
 class PricingAdmin(admin.ModelAdmin):
-    list_display = ('plano', 'ativo', 'modificado')
+    list_display = ('plano', 'preco', 'ativo', 'modificado')
 
 
 @admin.register(Slider)
